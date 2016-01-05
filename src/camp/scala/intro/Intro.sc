@@ -12,4 +12,10 @@ object Intro {
                                                   //> factorial: (x: BigInt)BigInt
 	
 	factorial(30)                             //> res0: BigInt = 265252859812191058636308480000000
+	
+	val name = "Hello World"                  //> name  : String = Hello World
+	val nameHasUppercase = name.exists(_.isUpper)
+                                                  //> nameHasUppercase  : Boolean = true
+	println(nameHasUppercase)                 //> true
+	
 }
