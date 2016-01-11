@@ -82,4 +82,31 @@ object SecondStep {
 	var pair = (99, "Lufballons")             //> pair  : (Int, String) = (99,Lufballons)
 	println(pair._1)                          //> 99
 	println(pair._2)                          //> Lufballons
+	
+	var jetSet = Set("Boeing", "Airbus")      //> jetSet  : scala.collection.immutable.Set[String] = Set(Boeing, Airbus)
+	jetSet += "Lear" // jetSet = jetSet + "Lear"
+	println(jetSet)                           //> Set(Boeing, Airbus, Lear)
+	println(jetSet.contains("Cessna"))        //> false
+	
+	val movieSet = scala.collection.mutable.Set("Hitch", "Poltergeist")
+                                                  //> movieSet  : scala.collection.mutable.Set[String] = Set(Poltergeist, Hitch)
+	movieSet += "Shrek" // movieSet.+=("Shrek)//> res16: camp.scala.secondstep.SecondStep.movieSet.type = Set(Poltergeist, Sh
+                                                  //| rek, Hitch)
+	println(movieSet)                         //> Set(Poltergeist, Shrek, Hitch)
+	
+	val hashSet = scala.collection.immutable.HashSet("Tomatoes", "Chilies")
+                                                  //> hashSet  : scala.collection.immutable.HashSet[String] = Set(Chilies, Tomato
+                                                  //| es)
+	println(hashSet + "Coriander")            //> Set(Chilies, Tomatoes, Coriander)
+	
+	val treasureMap = scala.collection.mutable.Map[Int, String]()
+                                                  //> treasureMap  : scala.collection.mutable.Map[Int,String] = Map()
+	treasureMap += ( 1 -> "Go to island" )    //> res17: camp.scala.secondstep.SecondStep.treasureMap.type = Map(1 -> Go to i
+                                                  //| sland)
+	treasureMap += ( 2 -> "Find big X on ground" )
+                                                  //> res18: camp.scala.secondstep.SecondStep.treasureMap.type = Map(2 -> Find bi
+                                                  //| g X on ground, 1 -> Go to island)
+	treasureMap += ( 3 -> "Dig" )             //> res19: camp.scala.secondstep.SecondStep.treasureMap.type = Map(2 -> Find bi
+                                                  //| g X on ground, 1 -> Go to island, 3 -> Dig)
+	println(treasureMap(2))                   //> Find big X on ground
 }
