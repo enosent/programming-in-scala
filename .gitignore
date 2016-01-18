@@ -18,4 +18,5 @@ build/
 .gradle/
 gradle/
 
+.cache-main
 .worksheet/
