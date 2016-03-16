@@ -88,6 +88,9 @@ object SecondStep {
 	println(jetSet)                           //> Set(Boeing, Airbus, Lear)
 	println(jetSet.contains("Cessna"))        //> false
 	
+	val valSet = Set("a", "b")                //> valSet  : scala.collection.immutable.Set[String] = Set(a, b)
+	//valSet += "c" // value += is not a member of scala.collection.immutable.Set[String]
+	
 	val movieSet = scala.collection.mutable.Set("Hitch", "Poltergeist")
                                                   //> movieSet  : scala.collection.mutable.Set[String] = Set(Poltergeist, Hitch)
 	movieSet += "Shrek" // movieSet.+=("Shrek)//> res16: camp.scala.secondstep.SecondStep.movieSet.type = Set(Poltergeist, Sh
